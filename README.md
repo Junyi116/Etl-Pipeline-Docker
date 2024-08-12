@@ -6,7 +6,7 @@ This code contains the steps to build an ETL pipeline that carries out the follo
 
 - Extracts transactional data from a local database
 - Identifies and removes duplicates
-- Loads the transformed data to a s3 bucket
+
 
 ## Requirements
 The minimum requirements:
@@ -19,9 +19,9 @@ The minimum requirements:
 ## Instructions on how to execute the code
 
 1. Clone the repository, and change the directory to **March-Bootcamp/week19**:
-```
-git clone https://github.com/shaq31415926/March-Bootcamp.git
-```
+   ```
+   git clone https://github.com/shaq31415926/March-Bootcamp.git
+   ```
 
 If you need a reminder how to clone a repository, check out this link [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
@@ -29,22 +29,19 @@ If you have never worked with git before, you will need to install it and you ca
 
 If you have already cloned the repository, locate the **March-Bootcamp/week19** folder:
 
-```
-git pull
-```
-
-
+   ```
+   git pull
+   ```
 2. Copy the `.env.copy` file to `.env`and fill out the environment variables.
 3. Create a data folder in the week19 folder with a copy of the database.
-
 4. Make sure you have Docker Desktop running. 
 
 Create the image which carries out all the steps:
-```
-docker image build -t etl .
-```
+   ```
+   docker image build -t etl .
+   ```
 
 Run the etl pipeline using docker:
-```
-docker run --env-file .env etl
-```
+   ```
+   docker run --env-file .env etl
+   ```
